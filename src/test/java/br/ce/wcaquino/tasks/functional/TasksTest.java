@@ -137,9 +137,9 @@ public class TasksTest {
 //			message = driver.findElement(By.id("message")).getText();
 //			Assert.assertEquals("Sucess!", message);
 //		} 
-		finally {			
-			//fechar o browser
-			driver.quit();
-		}
-	}
+//		finally {			
+//			//fechar o browser
+//			driver.quit();
+//		}
+//	}
 }
