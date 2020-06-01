@@ -80,7 +80,7 @@ public class TasksTest {
 			driver.findElement(By.id("addTodo")).click();
 			
 			//escrever descrição
-			driver.findElement(By.id("task")).sendKeys("Teste via Selenium");
+			driver.findElement(By.id("task")).sendKeys("Teste via Selenium 3");
 			
 			//clicar em salvar
 			driver.findElement(By.id("saveButton")).click();
@@ -120,23 +120,24 @@ public class TasksTest {
 		}
 	}
 		
-	@Test
-	public void deveRemoverTarefaComSucesso() throws MalformedURLException {
-		WebDriver driver = acessarAplicacao();
-		try {
-			//inserir tarefa
-			driver.findElement(By.id("addTodo")).click();
-			driver.findElement(By.id("task")).sendKeys("Teste via Selenium");
-			driver.findElement(By.id("dueDate")).sendKeys("10/10/2030");
-			driver.findElement(By.id("saveButton")).click();
-			String message = driver.findElement(By.id("message")).getText();
-			Assert.assertEquals("Sucess!", message);
-			
-			//remover a Tarefa
-			driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
-			message = driver.findElement(By.id("message")).getText();
-			Assert.assertEquals("Sucess!", message);
-		} finally {			
+//	@Test
+//	public void deveRemoverTarefaComSucesso() throws MalformedURLException {
+//		WebDriver driver = acessarAplicacao();
+//		try {
+//			//inserir tarefa
+//			driver.findElement(By.id("addTodo")).click();
+//			driver.findElement(By.id("task")).sendKeys("Teste via Selenium");
+//			driver.findElement(By.id("dueDate")).sendKeys("10/10/2030");
+//			driver.findElement(By.id("saveButton")).click();
+//			String message = driver.findElement(By.id("message")).getText();
+//			Assert.assertEquals("Sucess!", message);
+//			
+//			//remover a Tarefa
+//			driver.findElement(By.xpath("//a[@class='btn btn-outline-danger btn-sm']")).click();
+//			message = driver.findElement(By.id("message")).getText();
+//			Assert.assertEquals("Sucess!", message);
+//		} 
+		finally {			
 			//fechar o browser
 			driver.quit();
 		}
